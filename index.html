@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Defender | Jeu Spatial</title>
+    <meta name="description" content="Space Defender - Jeu de shoot 'em up spatial jouable directement dans votre navigateur. Développé par Ehouo Michael Jonathan.">
+    <meta name="author" content="Ehouo Michael Jonathan">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Logo -->
+            <a href="#home" class="nav-logo">
+                <i class="fas fa-rocket"></i>
+                <span class="logo-text">
+                    <span class="logo-primary">SPACE</span>
+                    <span class="logo-secondary">DEFENDER</span>
+                </span>
+            </a>
+            
+            <!-- Desktop Menu -->
+            <div class="nav-menu">
+                <a href="#home" class="nav-link active">
+                    <i class="fas fa-home"></i>
+                    <span>Accueil</span>
+                </a>
+                <a href="#play" class="nav-link">
+                    <i class="fas fa-gamepad"></i>
+                    <span>Jouer</span>
+                </a>
+                <a href="#features" class="nav-link">
+                    <i class="fas fa-star"></i>
+                    <span>Fonctionnalités</span>
+                </a>
+                <a href="#about" class="nav-link">
+                    <i class="fas fa-user"></i>
+                    <span>À propos</span>
+                </a>
+            </div>
+            
+            <!-- Mobile Toggle -->
+            <button class="nav-toggle" aria-label="Menu mobile">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            
+            <!-- Theme Toggle -->
+            <button class="theme-toggle" aria-label="Changer le thème">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+            <div class="mobile-menu-content">
+                <a href="#home" class="mobile-link">
+                    <i class="fas fa-home"></i>
+                    <span>Accueil</span>
+                </a>
+                <a href="#play" class="mobile-link">
+                    <i class="fas fa-gamepad"></i>
+                    <span>Jouer</span>
+                </a>
+                <a href="#features" class="mobile-link">
+                    <i class="fas fa-star"></i>
+                    <span>Fonctionnalités</span>
+                </a>
+                <a href="#about" class="mobile-link">
+                    <i class="fas fa-user"></i>
+                    <span>À propos</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="stars-container">
+                <div class="stars-large"></div>
+                <div class="stars-medium"></div>
+                <div class="stars-small"></div>
+            </div>
+        </div>
+        
+        <div class="hero-container">
+            <div class="hero-content">
+                <!-- Animated Title -->
+                <div class="title-wrapper">
+                    <h1 class="hero-title">
+                        <span class="title-word title-word-1">SPACE</span>
+                        <span class="title-word title-word-2">DEFENDER</span>
+                    </h1>
+                    <div class="title-underline"></div>
+                </div>
+                
+                <!-- Subtitle -->
+                <div class="subtitle-wrapper">
+                    <p class="hero-subtitle typing-animation">
+                        Jeu de shoot 'em up spatial <span class="highlight">jouable directement dans votre navigateur</span>
+                    </p>
+                </div>
+                
+                <!-- Description -->
+                <div class="hero-description">
+                    <p>Survivez aux vagues d'ennemis spatiaux, améliorez votre vaisseau et battez le record de score. 
+                    Un jeu complet avec effets visuels avancés et contrôles fluides.</p>
+                </div>
+                
+                <!-- Stats -->
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number" data-count="3">0</div>
+                            <div class="stat-label">Types d'ennemis</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number" data-count="60">0</div>
+                            <div class="stat-label">FPS garantis</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number" data-count="15">0</div>
+                            <div class="stat-label">Vagues de jeu</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number" data-count="9999">0</div>
+                            <div class="stat-label">Score maximum</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CTA -->
+                <div class="hero-cta">
+                    <a href="#play" class="btn btn-primary btn-lg btn-icon">
+                        <i class="fas fa-play-circle"></i>
+                        <span>Jouer maintenant</span>
+                    </a>
+                    <a href="#features" class="btn btn-outline btn-lg btn-icon">
+                        <i class="fas fa-cogs"></i>
+                        <span>Fonctionnalités</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Play Section (EN HAUT, AVANT TOUT) -->
+    <section id="play" class="section play-section">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-gamepad"></i>
+                    <span>Jouer</span>
+                </div>
+                <h2 class="section-title">Jouez à Space Defender</h2>
+                <p class="section-subtitle">Le jeu complet, directement dans votre navigateur</p>
+            </div>
+
+            <!-- Game Container -->
+            <div class="game-container">
+                <div class="game-wrapper">
+                    <!-- Game Canvas -->
+                    <canvas id="gameCanvas" width="800" height="600"></canvas>
+                    
+                    <!-- Game Stats (EN HAUT À GAUCHE) -->
+                    <div class="game-stats-top">
+                        <div class="stat-item">
+                            <i class="fas fa-heart"></i>
+                            <span id="lives">3</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-star"></i>
+                            <span id="score">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-wave-square"></i>
+                            <span id="wave">1</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Controls Info (EN BAS À DROITE) -->
+                    <div class="controls-info-bottom">
+                        <div class="control-hint">
+                            <span class="key">ZQSD</span> ou <span class="key">↑↓←→</span> : Déplacer
+                        </div>
+                        <div class="control-hint">
+                            <span class="key">ESPACE</span> : Tirer
+                        </div>
+                        <div class="control-hint">
+                            <span class="key">P</span> : Pause
+                        </div>
+                    </div>
+                    
+                    <!-- Start Screen -->
+                    <div id="startScreen" class="screen">
+                        <h2>SPACE DEFENDER</h2>
+                        <p>Survivez aux vagues d'ennemis spatiaux</p>
+                        <button id="startButton" class="btn btn-primary btn-lg">
+                            <i class="fas fa-play"></i> COMMENCER (ESPACE)
+                        </button>
+                        <div class="instructions">
+                            <p>Détruisez les ennemis pour marquer des points</p>
+                            <p>Évitez les collisions pour survivre</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Pause Screen -->
+                    <div id="pauseScreen" class="screen" style="display: none;">
+                        <h2>PAUSE</h2>
+                        <button id="resumeButton" class="btn btn-primary">
+                            <i class="fas fa-play"></i> REPRENDRE (P)
+                        </button>
+                        <button id="restartButton" class="btn btn-outline">
+                            <i class="fas fa-redo"></i> RECOMMENCER
+                        </button>
+                    </div>
+                    
+                    <!-- Game Over Screen -->
+                    <div id="gameOverScreen" class="screen" style="display: none;">
+                        <h2>GAME OVER</h2>
+                        <p>Score final: <span id="finalScore">0</span></p>
+                        <button id="playAgainButton" class="btn btn-primary">
+                            <i class="fas fa-redo"></i> REESSAYER
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section features-section dark">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-cogs"></i>
+                    <span>Fonctionnalités</span>
+                </div>
+                <h2 class="section-title">Fonctionnalités du jeu</h2>
+                <p class="section-subtitle">Découvrez ce qui rend Space Defender unique</p>
+            </div>
+            
+            <div class="features-grid">
+                <!-- Feature 1 -->
+                <div class="feature-card">
+                    <div class="feature-card-inner">
+                        <div class="feature-header">
+                            <div class="feature-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="feature-tags">
+                                <span class="tag tag-ai">IA</span>
+                                <span class="tag tag-difficulty">Difficulté</span>
+                            </div>
+                        </div>
+                        <h3 class="feature-title">3 Types d'Ennemis</h3>
+                        <p class="feature-description">
+                            Affrontez des ennemis basiques, rapides et tanks. Chaque type a son propre comportement, 
+                            sa vitesse et ses points de vie pour une expérience de jeu variée.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="feature-card">
+                    <div class="feature-card-inner">
+                        <div class="feature-header">
+                            <div class="feature-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="feature-tags">
+                                <span class="tag tag-progression">Progression</span>
+                            </div>
+                        </div>
+                        <h3 class="feature-title">Système de Vagues</h3>
+                        <p class="feature-description">
+                            La difficulté augmente progressivement avec 15 vagues de jeu. 
+                            Les ennemis deviennent plus nombreux, plus rapides et plus résistants.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="feature-card">
+                    <div class="feature-card-inner">
+                        <div class="feature-header">
+                            <div class="feature-icon">
+                                <i class="fas fa-gift"></i>
+                            </div>
+                            <div class="feature-tags">
+                                <span class="tag tag-powerups">Power-ups</span>
+                            </div>
+                        </div>
+                        <h3 class="feature-title">Power-ups Spéciaux</h3>
+                        <p class="feature-description">
+                            Collectez des bonus pour restaurer votre vie, augmenter votre puissance de tir 
+                            ou activer un bouclier temporaire. Stratégie et réflexes requis !
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="feature-card">
+                    <div class="feature-card-inner">
+                        <div class="feature-header">
+                            <div class="feature-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <div class="feature-tags">
+                                <span class="tag tag-performance">Performance</span>
+                                <span class="tag tag-optimization">Optimisation</span>
+                            </div>
+                        </div>
+                        <h3 class="feature-title">60 FPS Garantis</h3>
+                        <p class="feature-description">
+                            Moteur de jeu optimisé pour une expérience fluide à 60 images par seconde. 
+                            Effets visuels impressionnants sans sacrifier les performances.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="feature-card">
+                    <div class="feature-card-inner">
+                        <div class="feature-header">
+                            <div class="feature-icon">
+                                <i class="fas fa-gamepad"></i>
+                            </div>
+                            <div class="feature-tags">
+                                <span class="tag tag-controls">Contrôles</span>
+                                <span class="tag tag-ui">UI</span>
+                            </div>
+                        </div>
+                        <h3 class="feature-title">Contrôles Intuitifs</h3>
+                        <p class="feature-description">
+                            Jouez avec ZQSD ou les flèches directionnelles. Interface claire avec scores, 
+                            vies et vagues affichés en permanence. Prises en main immédiate.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Feature 6 -->
+                <div class="feature-card">
+                    <div class="feature-card-inner">
+                        <div class="feature-header">
+                            <div class="feature-icon">
+                                <i class="fas fa-paint-brush"></i>
+                            </div>
+                            <div class="feature-tags">
+                                <span class="tag tag-graphics">Graphismes</span>
+                                <span class="tag tag-effects">Effets</span>
+                            </div>
+                        </div>
+                        <h3 class="feature-title">Effets Visuels</h3>
+                        <p class="feature-description">
+                            Explosions spectaculaires, traînées de projectiles, étoiles scintillantes 
+                            et effets de particules pour une immersion spatiale totale.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-user"></i>
+                    <span>À propos</span>
+                </div>
+                <h2 class="section-title">À propos du projet</h2>
+                <p class="section-subtitle">Un projet développé avec passion et expertise</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="project-info">
+                    <h3>Space Defender - Projet de Développement</h3>
+                    <p>Space Defender est un jeu de shoot 'em up spatial développé entièrement en JavaScript, HTML5 et CSS3. 
+                    Ce projet démontre des compétences avancées en développement web et en création de jeux vidéo.</p>
+                    
+                    <div class="project-details">
+                        <div class="detail">
+                            <i class="fas fa-calendar-alt"></i>
+                            <div>
+                                <h4>Durée</h4>
+                                <p>Projet sur plusieurs semaines</p>
+                            </div>
+                        </div>
+                        <div class="detail">
+                            <i class="fas fa-code"></i>
+                            <div>
+                                <h4>Technologies</h4>
+                                <p>JavaScript, HTML5 Canvas, CSS3</p>
+                            </div>
+                        </div>
+                        <div class="detail">
+                            <i class="fas fa-file-code"></i>
+                            <div>
+                                <h4>Complexité</h4>
+                                <p>~2000 lignes de code</p>
+                            </div>
+                        </div>
+                        <div class="detail">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <h4>Objectif</h4>
+                                <p>Projet démonstration technique</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3>Compétences Développées</h3>
+                    <p>Ce projet a permis de maîtriser :</p>
+                    <ul>
+                        <li><strong>Programmation de jeu</strong> : Game loop, collisions, physique</li>
+                        <li><strong>HTML5 Canvas</strong> : Rendu graphique avancé</li>
+                        <li><strong>JavaScript avancé</strong> : Classes, gestion d'événements, animations</li>
+                        <li><strong>Design d'interface</strong> : UX/UI responsive et moderne</li>
+                        <li><strong>Performance web</strong> : Optimisation pour 60 FPS</li>
+                        <li><strong>Gestion de projet</strong> : Organisation et documentation</li>
+                    </ul>
+                </div>
+                
+                <div class="author-card">
+                    <div class="author-avatar">
+                        <i class="fas fa-user-astronaut"></i>
+                    </div>
+                    <h3>Ehouo Michael Jonathan</h3>
+                    <p class="author-title">Développeur & Concepteur</p>
+                    <p class="author-description">
+                        Passionné par le développement de jeux vidéo et les technologies web. 
+                        Space Defender représente le fruit d'un travail approfondi sur les techniques 
+                        modernes de développement frontend et de game design.
+                    </p>
+                    
+                    <div class="author-skills">
+                        <span class="skill-tag"><i class="fab fa-js"></i> JavaScript</span>
+                        <span class="skill-tag"><i class="fab fa-html5"></i> HTML5</span>
+                        <span class="skill-tag"><i class="fab fa-css3-alt"></i> CSS3</span>
+                        <span class="skill-tag"><i class="fas fa-gamepad"></i> Game Dev</span>
+                        <span class="skill-tag"><i class="fas fa-paint-brush"></i> UI/UX</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="section-container">
+            <div class="footer-content">
+                <div>
+                    <div class="footer-logo">
+                        <i class="fas fa-rocket"></i>
+                        <span>SPACE DEFENDER</span>
+                    </div>
+                    <p>Un jeu spatial développé avec passion et expertise technique.</p>
+                    <p>© 2024 - Ehouo Michael Jonathan</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="#home">Accueil</a></li>
+                        <li><a href="#play">Jouer</a></li>
+                        <li><a href="#features">Fonctionnalités</a></li>
+                        <li><a href="#about">À propos</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-social">
+                    <h3>Technologies</h3>
+                    <div class="social-icons">
+                        <span class="social-icon">
+                            <i class="fab fa-js"></i>
+                        </span>
+                        <span class="social-icon">
+                            <i class="fab fa-html5"></i>
+                        </span>
+                        <span class="social-icon">
+                            <i class="fab fa-css3-alt"></i>
+                        </span>
+                    </div>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">
+                        Développé avec les standards web modernes
+                    </p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>Space Defender v1.0 | Jeu entièrement jouable dans le navigateur</p>
+                <p>Compatible avec tous les navigateurs modernes</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <div class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <!-- Script -->
+    <script src="game-unified.js"></script>
+</body>
+</html>
